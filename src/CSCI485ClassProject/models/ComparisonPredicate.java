@@ -6,6 +6,10 @@ import static CSCI485ClassProject.StatusCode.PREDICATE_OR_EXPRESSION_INVALID;
 
 public class ComparisonPredicate {
 
+  public AlgebraicOperator getRightHandSideOperator() {
+    return rightHandSideOperator;
+  }
+
   public enum Type {
     NONE, // meaning no predicate
     ONE_ATTR, // only one attribute is referenced, e.g. Salary < 1500, Name == "Bob"
@@ -30,6 +34,10 @@ public class ComparisonPredicate {
   private String rightHandSideAttrName; // in the example, it is Age
   private AttributeType rightHandSideAttrType;
 
+  public AttributeType getRightHandSideAttrType() {
+    return rightHandSideAttrType;
+  }
+
   public String getLeftHandSideAttrName() {
     return leftHandSideAttrName;
   }
@@ -40,6 +48,10 @@ public class ComparisonPredicate {
 
   public AttributeType getLeftHandSideAttrType() {
     return leftHandSideAttrType;
+  }
+
+  public String getRightHandSideAttrName() {
+    return rightHandSideAttrName;
   }
 
   public void setLeftHandSideAttrType(AttributeType leftHandSideAttrType) {

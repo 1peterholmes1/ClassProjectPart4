@@ -1,6 +1,8 @@
 package CSCI485ClassProject;
 
 import CSCI485ClassProject.models.Record;
+import CSCI485ClassProject.models.TableMetadata;
+import com.apple.foundationdb.Transaction;
 
 public abstract class Iterator {
 
@@ -24,4 +26,8 @@ public abstract class Iterator {
   public abstract void commit();
 
   public abstract void abort();
+  public abstract String getTableName();
+  public abstract Transaction getTx();
+  public abstract TableMetadata getTableMetadata();
+  public abstract StatusCode delete();
 }
